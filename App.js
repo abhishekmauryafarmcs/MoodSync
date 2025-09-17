@@ -10,6 +10,7 @@ import WelcomeScreen from './src/screens/WelcomeScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import CheckInScreen from './src/screens/CheckInScreen';
 import JourneyScreen from './src/screens/JourneyScreen';
+import UsageScreen from './src/screens/UsageScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -25,6 +26,8 @@ function MainTabs() {
             iconName = focused ? 'home' : 'home-outline';
           } else if (route.name === 'Reflect') {
             iconName = focused ? 'heart' : 'heart-outline';
+          } else if (route.name === 'Usage') {
+            iconName = focused ? 'phone-portrait' : 'phone-portrait-outline';
           } else if (route.name === 'Journey') {
             iconName = focused ? 'trending-up' : 'trending-up-outline';
           }
@@ -52,6 +55,7 @@ function MainTabs() {
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Reflect" component={CheckInScreen} />
+      <Tab.Screen name="Usage" component={UsageScreen} />
       <Tab.Screen name="Journey" component={JourneyScreen} />
     </Tab.Navigator>
   );

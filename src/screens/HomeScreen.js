@@ -147,6 +147,21 @@ export default function HomeScreen({ navigation }) {
             </View>
           </View>
 
+          {/* Usage Insights Button */}
+          <TouchableOpacity
+            style={styles.usageButton}
+            onPress={() => navigation.navigate('Usage')}
+          >
+            <View style={styles.usageButtonContent}>
+              <Text style={styles.usageButtonEmoji}>📊</Text>
+              <View style={styles.usageButtonText}>
+                <Text style={styles.usageButtonTitle}>App Usage Insights</Text>
+                <Text style={styles.usageButtonSubtitle}>Understand your digital wellness</Text>
+              </View>
+            </View>
+            <Ionicons name="arrow-forward" size={18} color="#6366F1" />
+          </TouchableOpacity>
+
           {/* Journey Button */}
           <TouchableOpacity
             style={styles.journeyButton}
@@ -339,6 +354,45 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '600',
     textAlign: 'center',
+  },
+  usageButton: {
+    backgroundColor: 'white',
+    borderRadius: 16,
+    padding: 18,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+    borderWidth: 2,
+    borderColor: '#6366F1',
+    shadowColor: '#6366F1',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  usageButtonContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  usageButtonEmoji: {
+    fontSize: 32,
+    marginRight: 15,
+  },
+  usageButtonText: {
+    flex: 1,
+  },
+  usageButtonTitle: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#1E293B',
+    marginBottom: 2,
+  },
+  usageButtonSubtitle: {
+    fontSize: 14,
+    color: '#6366F1',
+    fontWeight: '500',
   },
   journeyButton: {
     backgroundColor: '#6366F1',

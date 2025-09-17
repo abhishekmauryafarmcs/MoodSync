@@ -27,7 +27,8 @@
         "android.permission.PACKAGE_USAGE_STATS",
         "android.permission.RECEIVE_BOOT_COMPLETED",
         "android.permission.VIBRATE",
-        "android.permission.WAKE_LOCK"
+        "android.permission.WAKE_LOCK",
+        "android.permission.QUERY_ALL_PACKAGES"
       ]
     },
     "web": {
@@ -45,6 +46,11 @@
     "notification": {
       "icon": "./assets/notification-icon.png",
       "color": "#667eea"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3af92b9c-17cf-4398-8b60-fad8cb239340"
+      }
     }
   }
 }
